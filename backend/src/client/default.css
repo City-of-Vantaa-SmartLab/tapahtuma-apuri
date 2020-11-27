@@ -1,0 +1,79 @@
+html * {
+  font-family: 'myriad-pro', myriad, Arial, sans-serif !important;
+}
+
+input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  height: 2em;
+}
+
+.error {
+  border-left: 4px solid red;
+  background-color: #ffdddd;
+}
+
+.success {
+  border-left: 4px solid #098b00;
+  background-color: rgb(136, 226, 130);
+}
+
+.info {
+  border-left: 4px solid #0398b6;
+  background-color: #83dcee;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+}
+
+span {
+  text-decoration: underline;
+  color: grey;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.Modal {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  width: 350px;
+  height: 200px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

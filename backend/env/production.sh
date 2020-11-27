@@ -1,0 +1,7 @@
+export DATABASE_URL="postgres://FILL_ME_IN:FILL_ME_IN@FILL_ME_IN:5432/FILL_ME_IN"
+export NODE_ENV="production"
+export PGUSER="FILL_ME_IN"
+export PGPASSWORD="FILL_ME_IN"
+export PGHOST="FILL_ME_IN"
+export PGDATABASE="FILL_ME_IN"
+export NODE_ENV="production"

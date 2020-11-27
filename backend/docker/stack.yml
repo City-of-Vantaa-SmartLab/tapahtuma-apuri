@@ -1,0 +1,13 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: FILL_ME_IN
+      POSTGRES_USER: admin
+    ports:
+      - 5432:5432
+    container_name: tapahtuma_apuri_db
