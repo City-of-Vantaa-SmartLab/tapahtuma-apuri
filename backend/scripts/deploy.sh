@@ -1,6 +1,18 @@
 #!/bin/bash
 set -euo pipefail
 
+# Deploy the current app version to production. Run generateEnvFile.js to obtain the required private-key.pem.
+
+if [[ ! -f ./scripts/private-key.pem ]] ; then
+    echo 'Missing private key. Did you run ./scripts/generateEnvFile.js?'
+    exit 1
+fi
+
+if [[ ! -f ./env/production.sh ]] ; then
+    echo 'Missing environment secrets. Did you run ./scripts/generateEnvFile.js?'
+    exit 1
+fi
+
 echo "[DEPLOY SCRIPT 1/4] Removing existing deployment artifacts..."
 ssh -i scripts/private-key.pem ec2-user@18.198.50.112 "sudo rm -R product && mkdir product"
 
