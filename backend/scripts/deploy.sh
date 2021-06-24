@@ -25,6 +25,7 @@ ssh -i scripts/private-key.pem ec2-user@18.198.50.112 "cd product && yarn instal
 echo "[DEPLOY SCRIPT 4/4] Restarting server..."
 ssh -i scripts/private-key.pem ec2-user@18.198.50.112 << EOF
   cd product
+  chmod +x ./env/production.sh
   . ./env/production.sh
   yarn migrate-prod
   pm2 flush
