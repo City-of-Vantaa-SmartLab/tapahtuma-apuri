@@ -4,11 +4,12 @@ const path = require('path');
 const session = require('express-session');
 
 const sess = {
-  secret: 'FILL_ME_IN',
+  secret: process.env.SESSION_SECRET,
   cookie: {
     maxAge: 1800000,
   },
   resave: false,
+  saveUninitialized: false,
 };
 
 app.use(session(sess));
