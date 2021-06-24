@@ -9,8 +9,6 @@
     "stop-db": "./docker/stop.sh",
     "start": ". ./env/dev.sh && nodemon src/server",
     "migrate-prod": ". ./env/production.sh && npm run migrate up",
-    "connect": "./scripts/connect_to_ec2_via_ssh",
-    "prod-logs": "ssh -i scripts/private-key.pem FILL_ME_IN@FILL_ME_IN 'pm2 logs --lines 100'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "UNLICENSED",
@@ -48,6 +46,7 @@
     "webpack-hot-middleware": "^2.22.3"
   },
   "devDependencies": {
+    "@aws-sdk/client-ssm": "^3.18.0",
     "eslint": "^5.4.0",
     "eslint-plugin-react": "^7.11.1",
     "nodemon": "^1.18.9",
