@@ -3,3 +3,4 @@ scripts/private-key.pem
 .vscode/
 package-lock.json
 build/bundle.js
+env/production.sh
